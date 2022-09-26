@@ -33,7 +33,7 @@
 
 
 
-- I want to get started: Follow the steps to get started swiftly.
+- Want to get started? Follow the steps to get started swiftly:
     [QUICK START](https://docs.zegocloud.com/article/14869)
 
 
