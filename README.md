@@ -43,3 +43,4 @@
 - To finest-grained build a livestream, you may try antoher one:
   [Live Streaming SDK](https://docs.zegocloud.com/article/7927)
 
+- If you have any questions regarding bugs and feature requests, visit the [ZEGOCLOUD community](https://discord.gg/EtNRATttyp) or email us at global_support@zegocloud.com.
