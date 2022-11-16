@@ -8,7 +8,6 @@ import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreaming
 public class LiveActivity extends AppCompatActivity {
 
     private boolean isHost;
-    private String mLiveID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +15,6 @@ public class LiveActivity extends AppCompatActivity {
         setContentView(R.layout.activity_live);
 
         isHost = getIntent().getBooleanExtra("host", false);
-        mLiveID = getIntent().getStringExtra("liveID");
         addFragment();
     }
 
@@ -30,9 +28,9 @@ public class LiveActivity extends AppCompatActivity {
 
         ZegoUIKitPrebuiltLiveStreamingConfig config;
         if (isHost) {
-            config = new ZegoUIKitPrebuiltLiveStreamingConfig(ZegoUIKitPrebuiltLiveStreamingConfig.ROLE_HOST);
+            config = ZegoUIKitPrebuiltLiveStreamingConfig.host();
         } else {
-            config = new ZegoUIKitPrebuiltLiveStreamingConfig(ZegoUIKitPrebuiltLiveStreamingConfig.ROLE_AUDIENCE);
+            config =  ZegoUIKitPrebuiltLiveStreamingConfig.audience();;
         }
 
         ZegoUIKitPrebuiltLiveStreamingFragment fragment = ZegoUIKitPrebuiltLiveStreamingFragment.newInstance(
