@@ -13,5 +13,5 @@
 //         maven { url 'https://jitpack.io' }
 //     }
 // }
-rootProject.name = "ZegoUIKitLiveStreaming"
+rootProject.name = "ZegoUIKitLiveStreamingExample"
 include ':app'
