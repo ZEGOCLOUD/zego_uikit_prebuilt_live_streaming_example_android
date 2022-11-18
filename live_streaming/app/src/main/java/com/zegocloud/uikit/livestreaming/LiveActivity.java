@@ -7,24 +7,28 @@ import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreaming
 
 public class LiveActivity extends AppCompatActivity {
 
-    private boolean isHost;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live);
 
-        isHost = getIntent().getBooleanExtra("host", false);
         addFragment();
     }
 
     private void addFragment() {
-        long appID = YourAppID;
-        String appSign = YourAppSign;
+        long appID = getIntent().getLongExtra("appID", 0L);
+        String appSign = getIntent().getStringExtra("appSign");
+        String userID = getIntent().getStringExtra("userID");
+        String userName = getIntent().getStringExtra("userName");
 
-        String liveID = mLiveID;
-        String userID = YourUserID;
-        String userName = YourUserName;
+        boolean isHost = getIntent().getBooleanExtra("host", false);
+        String liveID = getIntent().getStringExtra("liveID");
+//        long appID = YourAppID;
+//        String appSign = YourAppSign;
+//
+//        String liveID = mLiveID;
+//        String userID = YourUserID;
+//        String userName = YourUserName;
 
         ZegoUIKitPrebuiltLiveStreamingConfig config;
         if (isHost) {
