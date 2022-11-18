@@ -34,7 +34,7 @@ public class LiveActivity extends AppCompatActivity {
         if (isHost) {
             config = ZegoUIKitPrebuiltLiveStreamingConfig.host();
         } else {
-            config =  ZegoUIKitPrebuiltLiveStreamingConfig.audience();;
+            config =  ZegoUIKitPrebuiltLiveStreamingConfig.audience();
         }
 
         ZegoUIKitPrebuiltLiveStreamingFragment fragment = ZegoUIKitPrebuiltLiveStreamingFragment.newInstance(
