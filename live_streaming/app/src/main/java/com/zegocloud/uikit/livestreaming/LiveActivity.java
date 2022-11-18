@@ -26,7 +26,7 @@ public class LiveActivity extends AppCompatActivity {
 //        long appID = YourAppID;
 //        String appSign = YourAppSign;
 //
-//        String liveID = mLiveID;
+//        String liveID = yourLiveID;
 //        String userID = YourUserID;
 //        String userName = YourUserName;
 
