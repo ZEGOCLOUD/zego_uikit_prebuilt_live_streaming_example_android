@@ -39,7 +39,7 @@ public class LiveActivity extends AppCompatActivity {
         if (isHost) {
             config = ZegoUIKitPrebuiltLiveStreamingConfig.host(plugins);
         } else {
-            config = ZegoUIKitPrebuiltLiveStreamingConfig.audience();
+            config = ZegoUIKitPrebuiltLiveStreamingConfig.audience(plugins);
             ;
         }
 
