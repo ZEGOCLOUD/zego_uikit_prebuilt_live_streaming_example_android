@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         long appID = ;
         String appSign = ;
 
-        String userID = Build.MANUFACTURER + "_" + generateUserID();
+        String userID = generateUserID();
         String userName = userID + "_Name";
         String liveID = "test_live_id";
 
