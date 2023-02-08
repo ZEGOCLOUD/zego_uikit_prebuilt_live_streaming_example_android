@@ -2,12 +2,8 @@ package com.zegocloud.uikit.livestreaming;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
-import com.zegocloud.uikit.plugin.common.IZegoUIKitPlugin;
-import com.zegocloud.uikit.plugin.signaling.ZegoSignalingPlugin;
 import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreamingConfig;
 import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreamingFragment;
-import java.util.Collections;
-import java.util.List;
 
 public class LiveActivity extends AppCompatActivity {
 
@@ -27,20 +23,12 @@ public class LiveActivity extends AppCompatActivity {
 
         boolean isHost = getIntent().getBooleanExtra("host", false);
         String liveID = getIntent().getStringExtra("liveID");
-        //        long appID = YourAppID;
-        //        String appSign = YourAppSign;
-        //
-        //        String liveID = yourLiveID;
-        //        String userID = YourUserID;
-        //        String userName = YourUserName;
 
         ZegoUIKitPrebuiltLiveStreamingConfig config;
-        List<IZegoUIKitPlugin> plugins = Collections.singletonList(ZegoSignalingPlugin.getInstance());
         if (isHost) {
-            config = ZegoUIKitPrebuiltLiveStreamingConfig.host(plugins);
+            config = ZegoUIKitPrebuiltLiveStreamingConfig.host(true);
         } else {
-            config = ZegoUIKitPrebuiltLiveStreamingConfig.audience(plugins);
-            ;
+            config = ZegoUIKitPrebuiltLiveStreamingConfig.audience(true);
         }
 
         ZegoUIKitPrebuiltLiveStreamingFragment fragment = ZegoUIKitPrebuiltLiveStreamingFragment.newInstance(appID,
