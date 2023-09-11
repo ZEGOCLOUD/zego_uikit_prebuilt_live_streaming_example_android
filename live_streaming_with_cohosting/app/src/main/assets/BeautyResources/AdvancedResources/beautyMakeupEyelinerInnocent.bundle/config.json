@@ -1,0 +1,40 @@
+{
+  "filter": 3100,
+  "version": "1.4.5",
+  "type": "makeup",
+  "name": "心机",
+  "items": [
+    {
+      "type": "eyeliner_left",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "eyeliner-xj-l.png",
+            "alpha": 0.8,
+            "w": 256,
+            "h": 256,
+            "x": 104,
+            "y": 408
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyeliner_right",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "eyeliner-xj-r.png",
+            "alpha": 0.8,
+            "w": 256,
+            "h": 256,
+            "x": 360,
+            "y": 408
+          }
+        }
+      ]
+    }
+  ]
+}

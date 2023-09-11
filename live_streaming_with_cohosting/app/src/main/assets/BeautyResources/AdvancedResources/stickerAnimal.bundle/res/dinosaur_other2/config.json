@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "dinosaur_other201.png",
+  "animation": [
+    {
+      "name": "dinosaur_other2Anim",
+      "res": "dinosaur_other2",
+      "num": 27,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.1
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "filter": 3100,
+  "version": "1.2.5",
+  "backend": "gpu",
+  "name": "纤长",
+  "items": [
+    {
+      "type": "eyelash_left",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "alpha": 0.85,
+            "res": "eyelash-xc-l.png",
+            "w": 256,
+            "h": 256,
+            "x": 104,
+            "y": 408
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyelash_right",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "alpha": 0.85,
+            "res": "eyelash-xc-r.png",
+            "w": 256,
+            "h": 256,
+            "x": 360,
+            "y": 408
+          }
+        }
+      ]
+    }
+  ]
+}

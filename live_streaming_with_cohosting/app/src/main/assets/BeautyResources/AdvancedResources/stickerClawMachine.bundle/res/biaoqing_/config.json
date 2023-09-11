@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "biaoqing_000.png",
+  "animation": [
+    {
+      "name": "biaoqingAnim",
+      "res": "biaoqing_",
+      "num": 49,
+      "loop": -1,
+      "delay": 0,
+      "interval": 0.0667
+    }
+  ]
+}

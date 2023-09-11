@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "star_101.png",
+  "animation": [
+    {
+      "name": "star_1Anim",
+      "res": "star_1",
+      "num": 10,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.1
+    }
+  ]
+}

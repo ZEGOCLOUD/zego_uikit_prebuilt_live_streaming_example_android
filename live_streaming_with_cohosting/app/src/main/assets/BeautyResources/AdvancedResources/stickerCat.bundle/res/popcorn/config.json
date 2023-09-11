@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "popcorn01.png",
+  "animation": [
+    {
+      "name": "popcornAnim",
+      "res": "popcorn",
+      "num": 10,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.1
+    }
+  ]
+}

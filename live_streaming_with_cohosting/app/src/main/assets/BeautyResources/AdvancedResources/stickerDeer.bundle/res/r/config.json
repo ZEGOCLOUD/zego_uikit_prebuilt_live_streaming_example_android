@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "r01.png",
+  "animation": [
+    {
+      "name": "rightAnim",
+      "res": "r",
+      "num": 7,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.0625
+    }
+  ]
+}

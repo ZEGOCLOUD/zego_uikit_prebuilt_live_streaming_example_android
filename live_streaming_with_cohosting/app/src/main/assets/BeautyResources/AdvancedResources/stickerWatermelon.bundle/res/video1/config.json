@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "video": {
+    "file": "alpha.mp4",
+    "loop":  true
+  }
+}

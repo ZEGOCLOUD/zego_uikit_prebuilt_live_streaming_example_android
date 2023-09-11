@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic" : "qianjing_000.png",
+  "animation": [
+    {
+      "name": "qianjingAnim",
+      "res": "qianjing_",
+      "num": 29,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.03333
+    }
+  ]
+}

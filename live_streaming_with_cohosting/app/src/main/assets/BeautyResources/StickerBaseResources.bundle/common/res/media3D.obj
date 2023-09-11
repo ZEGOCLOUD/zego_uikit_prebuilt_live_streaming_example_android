@@ -1,0 +1,26 @@
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib media3D.mtl
+
+g media_g
+v -1.0 -1.0 0.0
+v -1.0 1.0 0.0
+v 1.0 -1.0 0.0
+v 1.0 1.0 0.0
+
+vt 0.0 0.0 0.0
+vt 0.0 1.0 0.0
+vt 1.0 0.0 0.0
+vt 1.0 1.0 0.0
+
+vn 0 0 0.930036
+vn 0 0 0.930036
+vn 0 0 0.930036
+vn 0 0 0.930036
+
+
+s 1
+g media_surface
+usemtl media_mtl
+f 1/1/1 2/2/2 4/4/4 3/3/3
+f 3/3/3 4/4/4 2/2/2 1/1/1

@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "other_101.png",
+  "animation": [
+    {
+      "name": "other_1Anim",
+      "res": "other_1",
+      "num": 2,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.5
+    }
+  ]
+}

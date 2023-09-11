@@ -1,0 +1,16 @@
+{
+  "version": "1.5.0",
+  "filter": 4100,
+  "type": "style",
+  "name": "琉璃",
+
+  "items": [
+    {
+      "type": "lut",
+      "default": {
+        "res": "res/liuli.png",
+        "range": [0, 100]
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "hh_000.png",
+  "animation": [
+      {
+        "name": "huahen",
+        "res": "hh_",
+        "num": 22,
+        "loop": -1,
+        "delay": 300,
+        "interval": 0.0666
+      }
+  ]
+}

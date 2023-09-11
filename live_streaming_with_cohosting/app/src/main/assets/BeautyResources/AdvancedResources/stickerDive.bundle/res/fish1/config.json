@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "pic": "fish101.png",
+  "video" : "",
+  "animation": [
+    {
+      "name": "fish1Anim",
+      "num": 3,
+      "res": "fish1",
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.34
+    }
+  ]
+}

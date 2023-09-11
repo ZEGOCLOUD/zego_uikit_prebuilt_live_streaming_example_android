@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "xiaochoumao_000.png",
+  "animation": [
+      {
+        "name": "hat",
+        "res": "xiaochoumao_",
+        "num": 19,
+        "loop": -1,
+        "delay": 300,
+        "interval": 0.0666
+      }
+  ]
+}

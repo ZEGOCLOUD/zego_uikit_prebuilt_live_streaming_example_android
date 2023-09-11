@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "faceFilm": [
+    {
+      "name": "xiaochouzhuang",
+      "res": "xiaochouzhuang/xiaochouzhuang_",
+      "type": "default",
+      "num": 45,
+      "blend": "blend_Multiply_Alpha",
+      "suffix": ".png",
+      "fps": 15,
+      "loop": 0,
+      "id": 0,
+      "trigger_times": 1
+    }
+  ]
+}

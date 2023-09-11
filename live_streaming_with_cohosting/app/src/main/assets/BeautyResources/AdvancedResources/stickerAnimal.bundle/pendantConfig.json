@@ -1,0 +1,538 @@
+{
+  "version": "1.0.0",
+  "minEngineVersion": "1.0.0",
+  "debug": true,
+  "type": "2d",
+  "supportETC1": true,
+
+  "foreground": [
+  ],
+
+  "background": [
+    {
+      "name": "bg1",
+      "fg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "media",
+          "type": "media",
+          "order": 0,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": []
+        },
+        {
+          "name": "xxx",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "ball",
+          "blend": "blend_Off",
+          "opacity": 0,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "ballAnim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "face": [
+    {
+      "name": "bear",
+      "res_index": 1,
+      "default" : true,
+      "widget": [
+        {
+          "name": "bear_hand",
+          "type": "sprite",
+          "order": 1,
+          "res": "bear_hand",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 218,
+          "positionRate": {
+            "x": 0,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 1.35,
+            "y": 1.35
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "bear_handAnim"
+                }]
+            }
+          ]
+        },
+        {
+          "name": "bear_other",
+          "type": "sprite",
+          "order": 1,
+          "res": "bear_other",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": -0.6,
+            "y": -0.3
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "bear_otherAnim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "bear_other2",
+          "type": "sprite",
+          "order": 1,
+          "res": "bear_other2",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.65,
+            "y": -0.1
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "bear_other2Anim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "bear_Sticker",
+          "type": "sprite",
+          "order": 2,
+          "res": "bear_Sticker",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "positionRate": {
+            "x": 0.19,
+            "y": 0.04
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.08,
+            "y": 0.08
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "visible",
+                "action": true
+              }]
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "name": "dinosaur",
+      "res_index": 2,
+      "default" : true,
+      "widget": [
+        {
+          "name": "dinosaur_hand",
+          "type": "sprite",
+          "order": 1,
+          "res": "dinosaur_hand",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 218,
+          "positionRate": {
+            "x": 0,
+            "y": -0.2
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.1
+          },
+          "scaleRate": {
+            "x": 1.35,
+            "y": 1.35
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "dinosaur_handAnim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "dinosaur_other",
+          "type": "sprite",
+          "order": 1,
+          "res": "dinosaur_other",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": -0.6,
+            "y": -0.3
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "dinosaur_otherAnim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "dinosaur_other2",
+          "type": "sprite",
+          "order": 1,
+          "res": "dinosaur_other2",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.65,
+            "y": -0.1
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "dinosaur_other2Anim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "dinosaur_Sticker",
+          "type": "sprite",
+          "order": 2,
+          "res": "dinosaur_Sticker",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "positionRate": {
+            "x": 0.19,
+            "y": 0.04
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.08,
+            "y": 0.08
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "visible",
+                "action": true
+              }]
+            }
+          ]
+        }
+
+      ]
+    },
+    {
+      "name": "cat",
+      "res_index": 3,
+      "default" : true,
+      "widget": [
+        {
+          "name": "cat_hand",
+          "type": "sprite",
+          "order": 1,
+          "res": "cat_hand",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 218,
+          "positionRate": {
+            "x": 0,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 1.35,
+            "y": 1.35
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "cat_handAnim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "cat_other",
+          "type": "sprite",
+          "order": 1,
+          "res": "cat_other",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": -0.6,
+            "y": -0.3
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "cat_otherAnim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "cat_other2",
+          "type": "sprite",
+          "order": 1,
+          "res": "cat_other2",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.65,
+            "y": -0.1
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "cat_other2Anim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "cat_Sticker",
+          "type": "sprite",
+          "order": 2,
+          "res": "cat_Sticker",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "positionRate": {
+            "x": 0.19,
+            "y": 0.04
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.08,
+            "y": 0.08
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "visible",
+                "action": true
+              }]
+            }
+          ]
+        }
+
+      ]
+    }
+  ],
+
+  "default_face_order": [
+    1, 1
+  ],
+
+  "state": {
+    "default": "state1",
+    "switch" : [
+      {
+        "events" : ["EVENT_HEAD_NOD"],
+        "from": "state1",
+        "to": "state2",
+        "actions": [{
+          "type": "changeFace",
+          "action": 2
+        }]
+      },
+      {
+        "events" : ["EVENT_HEAD_NOD"],
+        "from": "state2",
+        "to": "state3",
+        "actions": [{
+          "type": "changeFace",
+          "action": 3
+        }]
+      },
+      {
+        "events" : ["EVENT_HEAD_NOD"],
+        "from": "state3",
+        "to": "state1",
+        "actions": [{
+          "type": "changeFace",
+          "action": 1
+        }]
+      }
+    ]
+  }
+
+}

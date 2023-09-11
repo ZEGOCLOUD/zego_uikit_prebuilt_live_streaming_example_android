@@ -1,0 +1,350 @@
+{
+  "version": "1.0.0",
+  "minEngineVersion": "1.0.0",
+  "debug": true,
+  "type": "2d",
+  "supportETC1": true,
+  "foreground": [
+    {
+      "name": "fg1",
+      "fg_index": 1,
+      "default": true,
+      "element": [
+
+        {
+          "name": "watermelon",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "bottom",
+          "res": "watermelon",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "watermelonAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "xxx",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "ball",
+          "blend": "blend_Off",
+          "opacity": 0,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "ballAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leaf_1",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "right",
+          "vertical_layout": "custom",
+          "res": "leaf_1",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 1,
+            "y": 0.6
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "leaf_1Anim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leaf_2",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "left",
+          "vertical_layout": "custom",
+          "res": "leaf_2",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 1,
+            "y": 0.3
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "leaf_2Anim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leaf_3",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "right",
+          "vertical_layout": "custom",
+          "res": "leaf_3",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 1,
+            "y": 0.3
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "leaf_3Anim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "video1",
+          "type": "video1",
+          "order": 13,
+          "horizontal_layout": "center",
+          "vertical_layout": "center",
+          "res": "leaf_3",
+          "alpha_mode": 1,
+          "res": "video1",
+          "video_width": 300,
+          "video_height": 500,
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0.3,
+            "y": 0.4
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 40
+        }
+      ]
+    }
+  ],
+  "background": [
+    {
+      "name": "fg1",
+      "bg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "media",
+          "type": "media",
+          "order": 0,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": []
+        }
+      ]
+    }
+    ],
+  "face": [
+    {
+      "name": "xigua",
+      "res_index": 1,
+      "default": true,
+      "replace_texture": "target.png",
+      "widget": [
+        {
+          "name": "eatwatermelon",
+          "type": "sprite",
+          "order": 1,
+          "res": "eatwatermelon",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "rotateFaceMask": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0,
+            "y": -0.6
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 1.2,
+            "y": 1.2
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_MOUSE_OPEN",
+              "actions": [
+                {
+                  "type": "frameAnimation",
+                  "action": "eatwatermelonAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "other_1",
+          "type": "sprite",
+          "order": 1,
+          "res": "other_1",
+          "opacity": 255,
+          "visible": true,
+          "blend": "blend_UseCocos",
+          "mountPoint": 144,
+          "rotateFaceMask": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "positionRate": {
+            "x": -0.6,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "other_1Anim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "other_2",
+          "type": "sprite",
+          "order": 1,
+          "res": "other_2",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 144,
+          "rotateFaceMask": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0.6,
+            "y": -0.3
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "other_2Anim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "default_face_order": [
+    1,
+    1
+  ]
+}

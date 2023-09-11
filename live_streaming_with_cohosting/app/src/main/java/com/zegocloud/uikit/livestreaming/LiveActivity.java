@@ -7,6 +7,8 @@ import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreaming
 
 public class LiveActivity extends AppCompatActivity {
 
+    private static final String TAG = "LiveActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class LiveActivity extends AppCompatActivity {
         } else {
             config = ZegoUIKitPrebuiltLiveStreamingConfig.audience(true);
         }
+
 
         ZegoUIKitPrebuiltLiveStreamingFragment fragment = ZegoUIKitPrebuiltLiveStreamingFragment.newInstance(appID,
             appSign, userID, userName, liveID, config);

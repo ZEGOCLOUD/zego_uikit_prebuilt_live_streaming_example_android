@@ -1,0 +1,259 @@
+{
+  "version": "1.0.0",
+  "minEngineVersion": "1.0.0",
+  "debug": true,
+  "type": "2d",
+  "supportETC1": true,
+
+  "foreground": [
+    {
+      "name": "fg1",
+      "fg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "bg_center",
+          "type": "sprite",
+          "order": 0,
+          "res": "wawajibeijing",
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": []
+        },
+        {
+          "name": "bg_outside",
+          "type": "sprite",
+          "order": 30,
+          "res": "wk",
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": []
+        }
+      ]
+    }
+  ],
+
+  "background": [
+    {
+      "name": "bg1",
+      "bg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "xxx",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "ball",
+          "blend": "blend_Off",
+          "opacity": 0,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "ballAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "topBiaoqing",
+          "type": "sprite",
+          "order": 31,
+          "horizontal_layout": "full",
+          "vertical_layout": "top",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "res": "biaoqing_",
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "biaoqingAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "yaoganAnim",
+          "type": "sprite",
+          "order": 31,
+          "horizontal_layout": "full",
+          "vertical_layout": "bottom",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "res": "yaogan_",
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "yaoganAnim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "face": [
+    {
+      "name": "baby",
+      "res_index": 1,
+      "default" : true,
+      "events": [
+        {
+          "event": "EVENT_FACE_ENTER",
+          "actions": [
+            {
+              "type": "startFaceFilm",
+              "action": "lianhong"
+            }
+          ]
+        }
+      ],
+      "widget": [
+        {
+          "name": "wawa",
+          "type": "sprite",
+          "order": 20,
+          "res": "wawa",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 218,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0,
+            "y": -0.5
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 2,
+            "y": 2
+          },
+          "rotate": 0,
+          "events": [
+          ],
+          "children" : [
+            {
+              "name": "faceSegment",
+              "type": "faceSegment",
+              "order": -2,
+              "positionRate": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "anchor": {
+                "x": 0.5,
+                "y": 0.5
+              },
+              "scaleRate": {
+                "x": 0.31,
+                "y": 0.12
+              },
+              "rotate": 0
+            }
+          ]
+        },
+        {
+          "name": "aixin",
+          "type": "sprite",
+          "res": "aixin",
+          "order": 21,
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 218,
+          "positionRate": {
+            "x": 0.5,
+            "y": 0.3
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 2.5
+          },
+          "scaleRate": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "rotate": 0
+        }
+      ]
+    }
+  ],
+
+  "default_face_order": [
+    1, 1
+  ]
+}

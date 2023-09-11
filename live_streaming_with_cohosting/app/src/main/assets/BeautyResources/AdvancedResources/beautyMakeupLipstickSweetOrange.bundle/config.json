@@ -1,0 +1,25 @@
+{
+  "filter": 3100,
+  "version": "1.4.5",
+  "type": "makeup",
+  "name": "甜橘色",
+  "items": [
+    {
+      "type": "lip",
+      "layers":[
+        {
+          "default": {
+            "blend": 2,
+            "alpha": 0.92,
+            "range": [0.0, 1.0],
+            "res": "tjs.png",
+            "w": 512,
+            "h": 279,
+            "x": 104,
+            "y": 640
+          }
+        }
+      ]
+    }
+  ]
+}

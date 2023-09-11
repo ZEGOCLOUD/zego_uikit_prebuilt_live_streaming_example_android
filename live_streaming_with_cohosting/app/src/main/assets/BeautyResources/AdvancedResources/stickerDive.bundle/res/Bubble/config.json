@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "pic": "Bubble00.png",
+  "video" : "",
+  "animation": [
+    {
+      "name": "bubbleAnim",
+      "res": "Bubble",
+      "num": 32,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.0625
+    }
+  ]
+}

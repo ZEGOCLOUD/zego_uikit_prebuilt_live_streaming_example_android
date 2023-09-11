@@ -1,0 +1,15 @@
+{
+  "version": "1.5.0",
+  "filter": 3030,
+  "type": "whiten_teeth",
+  "name": "白牙",
+  "items": [
+    {
+      "type": "lut",
+      "default": {
+        "res": "res/teeth_lookup_1.4.0.png",
+        "range": [0, 100]
+      }
+    }
+  ]
+}

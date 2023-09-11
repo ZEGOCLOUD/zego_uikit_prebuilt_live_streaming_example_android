@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "cat_other201.png",
+  "animation": [
+    {
+      "name": "cat_other2Anim",
+      "res": "cat_other2",
+      "num": 14,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.1
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "puke_000.png",
+  "animation": [
+      {
+        "name": "puke",
+        "res": "puke_",
+        "num": 44,
+        "loop": 1,
+        "delay": 300,
+        "interval": 0.0666
+      }
+  ]
+}

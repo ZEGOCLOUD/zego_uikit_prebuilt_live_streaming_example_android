@@ -1,0 +1,16 @@
+{
+  "version": "1.5.0",
+  "filter": 4100,
+  "type": "style",
+  "name": "秋田",
+
+  "items": [
+    {
+      "type": "lut",
+      "default": {
+        "res": "res/qiutian.png",
+        "range": [0, 100]
+      }
+    }
+  ]
+}

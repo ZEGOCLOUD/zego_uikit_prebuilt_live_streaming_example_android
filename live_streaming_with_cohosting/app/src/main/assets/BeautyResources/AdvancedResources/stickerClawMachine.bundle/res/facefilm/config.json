@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "faceFilm": [
+    {
+      "name": "lianhong",
+      "res": "lianhong/lianhong_",
+      "type": "uv",
+      "num": 0,
+      "blend": "blend_Opacity",
+      "suffix": ".png",
+      "fps": 1,
+      "loop": 0,
+      "id": 0,
+      "trigger_times": -1
+    }
+  ]
+}

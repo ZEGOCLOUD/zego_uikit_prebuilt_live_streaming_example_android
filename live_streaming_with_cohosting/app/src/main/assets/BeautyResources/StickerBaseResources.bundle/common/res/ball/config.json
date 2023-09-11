@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "ball00.png",
+  "animation": [
+    {
+      "name": "ballAnim",
+      "res": "ball",
+      "num": 2,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.0625
+    }
+  ]
+}

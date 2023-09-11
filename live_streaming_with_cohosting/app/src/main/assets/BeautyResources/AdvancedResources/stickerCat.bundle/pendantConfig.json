@@ -1,0 +1,417 @@
+{
+  "version": "1.0.0",
+  "minEngineVersion": "1.0.0",
+  "debug": true,
+  "type": "2d",
+  "supportETC1": true,
+
+  "foreground": [
+  ],
+
+  "background": [
+    {
+      "name": "fg1",
+      "bg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "media",
+          "type": "media",
+          "order": 0,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": []
+        },
+        {
+          "name": "xxx",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "ball",
+          "blend": "blend_Off",
+          "opacity": 0,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "ballAnim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "face": [
+    {
+      "name": "rabbit",
+      "res_index": 1,
+      "default" : true,
+      "widget": [
+        {
+          "name": "Headgear",
+          "type": "sprite",
+          "order": 1,
+          "res": "Headgear",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 218,
+          "rotateFaceMask":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0,
+            "y": -0.37
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 1.35,
+            "y": 1.35
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                  "type": "animation",
+                  "action": "HeadgearAnim"
+                }]
+            }
+          ]
+        },
+        {
+          "name": "popcorn",
+          "type": "sprite",
+          "order": 2,
+          "res": "popcorn",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 130,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": -0.5,
+            "y": -0.4
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "popcornAnim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "teamilk",
+          "type": "sprite",
+          "order": 3,
+          "res": "teamilk",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 130,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.55,
+            "y": -0.65
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "teamilkAnim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "expression_1",
+          "type": "sprite",
+          "order": 4,
+          "res": "expression_1",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 218,
+          "rotateFaceMask":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.4
+          },
+          "scaleRate": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "rotate": 0,
+          "events": []
+        },
+        {
+          "name": "expression_2",
+          "type": "sprite",
+          "order": 5,
+          "res": "expression_2",
+          "opacity": 255,
+          "visible": false,
+          "mountPoint": 218,
+          "rotateFaceMask":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.4
+          },
+          "scaleRate": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "visible",
+                "target": "expression_2",
+                "action": false
+              },{
+                "type": "visible",
+                "target": "expression_1",
+                "action": true
+              },{
+                "type": "animation",
+                "target": "expression_1",
+                "action": "expression_1Anim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "expression_change",
+          "type": "sprite",
+          "order": 6,
+          "res": "expression_change",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 130,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.3,
+            "y": 0.75
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_EYE_CLOSE",
+              "actions": [{
+                "type": "animation",
+                "action": "expression_changeAnim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "star_1",
+          "type": "sprite",
+          "order": 7,
+          "res": "star_1",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 130,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": -0.6,
+            "y": 0.70
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.45,
+            "y": 0.45
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "star_1Anim"
+              }]
+            }
+          ]
+        },
+        {
+          "name": "star_2",
+          "type": "sprite",
+          "order": 8,
+          "res": "star_2",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 130,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.7,
+            "y": -0.20
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [{
+                "type": "animation",
+                "action": "star_2Anim"
+              }]
+            }
+          ]
+        }
+      ]
+    }
+
+  ],
+
+  "default_face_order": [
+    1, 1
+  ],
+
+  "state": {
+    "default": "state1",
+    "switch" : [
+      {
+        "events" : ["EVENT_EYE_CLOSE"],
+        "from": "state1",
+        "to": "state2",
+        "actions": [{
+          "type": "visible",
+          "target": "expression_2",
+          "action": true
+        },{
+          "type": "visible",
+          "target": "expression_1",
+          "action": false
+        },{
+          "type": "animation",
+          "target": "expression_2",
+          "action": "expression_2Anim"
+        }]
+      },
+      {
+        "events" : ["EVENT_EYE_CLOSE"],
+        "from": "state2",
+        "to": "state1",
+        "actions": [{
+          "type": "visible",
+          "target": "expression_1",
+          "action": true
+        },{
+          "type": "visible",
+          "target": "expression_2",
+          "action": false
+        },{
+          "type": "animation",
+          "target": "expression_1",
+          "action": "expression_1Anim"
+        }]
+      }
+    ]
+  }
+}

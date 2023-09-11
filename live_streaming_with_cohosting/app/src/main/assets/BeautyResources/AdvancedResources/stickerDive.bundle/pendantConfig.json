@@ -1,0 +1,284 @@
+{
+  "version": "1.0.0",
+  "minEngineVersion": "1.0.0",
+  "debug": true,
+  "type": "2d",
+  "supportETC1": true,
+
+  "foreground": [
+    {
+      "name": "fg1",
+      "fg_index": 1,
+      "default" : true,
+      "element": [],
+      "particle": []
+    },
+    {
+      "name": "fg2",
+      "fg_index": 2,
+      "default" : false,
+      "element": [],
+      "particle": []
+    }
+  ],
+
+  "background": [
+    {
+      "name": "bg1",
+      "bg_index": 1,
+      "default" : true,
+      "element":[
+        {
+          "name": "media",
+          "type": "media",
+          "order": 0,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": []
+        },
+        {
+          "name": "xxx",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "ball",
+          "blend": "blend_Off",
+          "opacity": 0,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "ballAnim"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "particle": []
+    },
+    {
+      "name": "bg2",
+      "bg_index": 2,
+      "default" : false,
+      "element": [],
+      "particle": []
+    }
+  ],
+
+  "face": [
+    {
+      "name": "deer",
+      "res_index": 1,
+      "default": true,
+      "widget": [
+        {
+          "name": "bubble",
+          "type": "sprite",
+          "order": 1,
+          "res": "Bubble",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 31,
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.2,
+            "y": 0.3
+          },
+          "scaleRate": {
+            "x": 0.2,
+            "y": 0.2
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "bubbleAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "glass",
+          "type": "sprite",
+          "order": 1,
+          "res": "glass",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 128,
+          "positionRate": {
+            "x": 0.021,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.43,
+            "y": 0.47
+          },
+          "scaleRate": {
+            "x": 0.95,
+            "y": 0.95
+          },
+          "rotate": 0,
+          "events": [
+          ]
+        },
+        {
+          "name": "cat",
+          "type": "sprite",
+          "order": 1,
+          "res": "cat",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 14,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": -0.2,
+            "y": -0.2
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.8,
+            "y": 0.8
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "catAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fish1",
+          "type": "sprite",
+          "order": 1,
+          "res": "fish1",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 216,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": -0.2,
+            "y": 0.0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "fish1Anim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fish2",
+          "type": "sprite",
+          "order": 1,
+          "res": "fish2",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 22,
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.1,
+            "y": -0.15
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.4,
+            "y": 0.4
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "fish2Anim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "default_face_order": [
+    1, 1
+  ]
+
+}

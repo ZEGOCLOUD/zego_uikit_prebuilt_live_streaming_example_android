@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "leaf_101.png",
+  "animation": [
+    {
+      "name": "leaf_1Anim",
+      "res": "leaf_1",
+      "num": 16,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.0625
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "filter": 3100,
+  "version": "1.4.5",
+  "type": "makeup",
+  "name": "纯欲妆",
+  "items": [
+    {
+      "type": "lut",
+      "macos": {
+        "res": "cy_filter.png",
+        "range": [0.0, 0.7]
+      },
+      "windows": {
+        "res": "cy_filter.png",
+        "range": [0.0, 0.7]
+      },
+      "default": {
+        "res": "cy_filter.png",
+        "range": [0.0, 1.0]
+      }
+    },
+    {
+      "type": "lip",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "cy_lip.png",
+            "alpha": 1.0,
+            "w": 512,
+            "h": 279,
+            "x": 104,
+            "y": 640
+          }
+        }
+      ]
+    },
+    {
+      "type": "cheek",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "cy_cheek.png",
+            "alpha": 1.0,
+            "w": 720,
+            "h": 470,
+            "x": 0,
+            "y": 353
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyeball_left",
+      "layers": [
+        {
+          "default": {
+            "blend": 16,
+            "res": "cy_eyeball.png",
+            "alpha": 1.0,
+            "w": 256,
+            "h": 256,
+            "x": 106,
+            "y": 407
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyeball_right",
+      "layers": [
+        {
+          "default": {
+            "blend": 16,
+            "res": "cy_eyeball.png",
+            "alpha": 1.0,
+            "w": 256,
+            "h": 256,
+            "x": 360,
+            "y": 407
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyelash_left",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "cy_eyelash_left.png",
+            "alpha": 1.0,
+            "w": 256,
+            "h": 256,
+            "x": 104,
+            "y": 408
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyelash_right",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "cy_eyelash_right.png",
+            "alpha": 1.0,
+            "w": 256,
+            "h": 256,
+            "x": 360,
+            "y": 408
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyeliner_left",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "cy_eyeliner_left.png",
+            "alpha": 1.0,
+            "w": 256,
+            "h": 256,
+            "x": 104,
+            "y": 408
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyeliner_right",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "cy_eyeliner_right.png",
+            "alpha": 1.0,
+            "w": 256,
+            "h": 256,
+            "x": 360,
+            "y": 408
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyeshadow_left",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "cy_eyeshadow_left.png",
+            "alpha": 1.0,
+            "w": 256,
+            "h": 256,
+            "x": 104,
+            "y": 408
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyeshadow_right",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "cy_eyeshadow_right.png",
+            "alpha": 1.0,
+            "w": 256,
+            "h": 256,
+            "x": 360,
+            "y": 408
+          }
+        }
+      ]
+    }
+  ]
+}

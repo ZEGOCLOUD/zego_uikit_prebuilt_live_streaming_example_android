@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "mofazhen_000.png",
+  "animation": [
+    {
+      "name": "mofazhenAnim",
+      "res": "mofazhen_",
+      "num": 30,
+      "loop": 1,
+      "delay": 300,
+      "interval": 0.0667
+    }
+  ]
+}

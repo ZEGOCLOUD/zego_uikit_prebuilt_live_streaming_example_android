@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "expression_101.png",
+  "animation": [
+    {
+      "name": "expression_1Anim",
+      "res": "expression_1",
+      "num": 5,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.2
+    }
+  ]
+}

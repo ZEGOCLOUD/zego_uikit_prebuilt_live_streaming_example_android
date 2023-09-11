@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "lizi_050.png",
+  "animation": [
+      {
+        "name": "lizi",
+        "res": "lizi_",
+        "num": 50,
+        "loop": -1,
+        "delay": 300,
+        "interval": 0.0666
+      }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+  "version": "1.0.0",
+  "minEngineVersion": "1.0.0",
+  "debug": true,
+  "type": "2d",
+  "supportETC1": true,
+  "background": [
+    {
+      "name": "bk",
+      "bg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "media",
+          "type": "media",
+          "order": 0,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": []
+        }
+      ]
+    }
+  ],
+
+  "foreground": [
+    {
+      "name": "fg",
+      "bg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "xxx",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "ball",
+          "blend": "blend_Off",
+          "opacity": 0,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "ballAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+
+          "name": "puke",
+          "type": "sprite",
+          "order": 9,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "puke",
+          "alpha_mode" : 1,
+          "opacity": 255,
+          "visible": true,
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_HEAD_SHAKE",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "puke"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "qiqiuL",
+          "type": "sprite", 
+          "order": 10,
+          "horizontal_layout": "left",
+          "vertical_layout": "bottom",
+          "res": "qiqiuL",
+          "alpha_mode" : 1, 
+          "opacity": 255,
+          "visible": true,
+          "scale": {
+            "x": 0.8,
+            "y": 0.8
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "qiqiuL"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "qiqiuR",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "right",
+          "vertical_layout": "bottom",
+          "res": "qiqiuR",
+          "alpha_mode" : 1,
+          "opacity": 255,
+          "visible": true,
+          "scale": {
+            "x": 0.8,
+            "y": 0.8
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "qiqiuR"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "huahen",
+          "type": "sprite", 
+          "order": 11,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "huahen",
+          "alpha_mode" : 1, 
+          "blend": "blend_SoftLight",
+          "opacity": 255,
+          "visible": true,
+         
+          "scale": {
+                    "x": 1,
+                  "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "huahen"
+                }
+              ]
+            },
+            {
+              "event": "EVENT_HEAD_SHAKE",
+              "actions": [
+                {
+                  "type": "visible",
+                  "action": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+
+  "face": [
+    {
+      "name": "xiaochou",
+      "res_index": 1,
+      "default": true,
+      "widget": [
+        {
+          "name": "nose",
+          "type": "sprite",
+          "order": 1,
+          "res": "nose",
+          "opacity": 255,
+          "visible": true,
+          "blend": "blend_Off",
+          "mountPoint": 144,
+          "rotateFaceMask": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0,
+            "y": 0.05
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotate": 0,
+          "events": [
+            {
+            "event": "EVENT_FACE_ENTER",
+            "actions": [
+              {
+                "type": "visible",
+                "action": true
+              }
+              ]
+              },
+            {
+              "event": "EVENT_HEAD_SHAKE",
+              "actions": [
+                {
+                  "type": "startFaceFilm",
+                  "action": "xiaochouzhuang"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hat",
+          "type": "sprite",
+          "order": 2,
+          "res": "hat",
+          "opacity": 255,
+          "visible": true,
+          "blend": "blend_Off",
+          "mountPoint": 218,
+          "rotateFaceMask": {
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0,
+            "y": -0.17
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.3
+          },
+          "scaleRate": {
+            "x": 2,
+            "y": 2
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "hat"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "default_face_order": [
+    1, 1
+  ],
+  "music": [
+  ]
+}

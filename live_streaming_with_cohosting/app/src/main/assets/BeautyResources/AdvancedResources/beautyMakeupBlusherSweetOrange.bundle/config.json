@@ -1,0 +1,25 @@
+{
+  "filter": 3100,
+  "version": "1.4.5",
+  "type": "makeup",
+  "name": "甜橙",
+  "items": [
+    {
+      "type": "cheek",
+      "layers": [
+        {
+          "default": {
+            "blend": 2,
+            "res": "tc.png",
+            "alpha": 1.0,
+            "range": [0.0, 1.0],
+            "w": 720,
+            "h": 470,
+            "x": 0,
+            "y": 353
+          }
+        }
+      ]
+    }
+  ]
+}

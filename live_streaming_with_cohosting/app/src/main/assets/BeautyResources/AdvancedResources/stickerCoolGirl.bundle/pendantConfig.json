@@ -1,0 +1,193 @@
+{
+  "version": "1.0.0",
+  "minEngineVersion": "1.0.0",
+  "debug": true,
+  "type": "2d",
+  "supportETC1": true,
+  "foreground": [
+    {
+      "name": "fg1",
+      "fg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "qianjing",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "bottom",
+          "res": "qianjing",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "qianjingAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "xxx",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "ball",
+          "blend": "blend_Off",
+          "opacity": 0,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "ballAnim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "background": [
+    {
+      "name": "bg1",
+      "bg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "media",
+          "type": "media",
+          "order": 0,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_Off",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+          ]
+        }
+      ]
+    }
+  ],
+  "face": [
+    {
+      "name": "lian",
+      "res_index": 1,
+      "default": true,
+      "events": [
+        {
+          "event": "EVENT_FACE_ENTER",
+          "actions": [
+            {
+              "type": "startFaceFilm",
+              "action": "liuguang"
+            },
+            {
+              "type": "startFaceFilm",
+              "action": "zhuangshi"
+            }
+          ]
+        }
+      ],
+      "widget": [
+        {
+          "name": "erduoL",
+          "type": "sprite",
+          "order": 1,
+          "res": "erduoL",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 214,
+          "rotateFaceMask": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0.07,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.2
+          },
+          "scaleRate": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotate": 0,
+          "events": [
+
+          ]
+        },
+        {
+          "name": "erduoR",
+          "type": "sprite",
+          "order": 1,
+          "res": "erduoR",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 215,
+          "rotateFaceMask": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "positionRate": {
+            "x": -0.07,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.2
+          },
+          "scaleRate": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotate": 0
+        }
+      ]
+    }
+  ],
+  "default_face_order": [
+    1,
+    1
+  ]
+}

@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">ZegoUIKitLiveStreamingPKExample</string>
+
+  <string name="livestreaming_send_pk_error">send pk request, return error :%d</string>
+  <string name="livestreaming_send_pk_no_reply">send pk request,but no reply</string>
+  <string name="livestreaming_send_pk_rejected">send pk request,but rejected</string>
+  <string name="livestreaming_send_pk_busy">send pk request,but the host is busy</string>
+  <string name="livestreaming_invite_pk_title">%s invite you pkbattle</string>
+  <string name="livestreaming_stop_pk_message">%s has Stopped PK</string>
+</resources>

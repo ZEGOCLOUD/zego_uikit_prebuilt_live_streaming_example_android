@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "Headgear01.png",
+  "animation": [
+    {
+      "name": "HeadgearAnim",
+      "res": "Headgear",
+      "num": 16,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.0625
+    }
+  ]
+}

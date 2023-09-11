@@ -1,0 +1,377 @@
+{
+  "version": "1.0.0",
+  "minEngineVersion": "1.0.0",
+  "debug": true,
+  "type": "2d",
+  "supportETC1": true,
+  "foreground": [
+    {
+      "name": "fg1",
+      "fg_index": 1,
+      "default": true,
+      "element": []
+    },
+    {
+      "name": "fg2",
+      "fg_index": 2,
+      "default": false,
+      "element": []
+    }
+  ],
+  "background": [
+    {
+      "name": "bg1",
+      "bg_index": 1,
+      "default": true,
+      "element": [
+        {
+          "name": "media",
+          "type": "media",
+          "order": 0,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "blend": "blend_UseCocos",
+          "opacity": 255,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": []
+        },
+        {
+          "name": "xxx",
+          "type": "sprite",
+          "order": 10,
+          "horizontal_layout": "full",
+          "vertical_layout": "full",
+          "res": "ball",
+          "blend": "blend_Off",
+          "opacity": 0,
+          "visible": true,
+          "position": {
+            "x": 0,
+            "y": 0
+          },
+          "scale": {
+            "x": 1,
+            "y": 1
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_SCENE_BEGIN",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "ballAnim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bg2",
+      "bg_index": 2,
+      "default": false,
+      "element": []
+    }
+  ],
+  "face": [
+    {
+      "name": "deer",
+      "res_index": 1,
+      "default": true,
+      "widget": [
+        {
+          "name": "nose",
+          "type": "sprite",
+          "order": 1,
+          "res": "nose",
+          "opacity": 255,
+          "visible": true,
+          "blend": "blend_UseCocos",
+          "mountPoint": 130,
+          "rotateFaceMask":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0,
+            "y": 0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.2,
+            "y": 0.2
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "visible",
+                  "action": true
+                },
+                {
+                  "type": "animation",
+                  "action": "noseAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "left",
+          "type": "sprite",
+          "order": 1,
+          "res": "l",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 214,
+          "blend": "blend_UseCocos",
+          "rotateFaceMask":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": -0.03,
+            "y": 0.15
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "leftAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "right",
+          "type": "sprite",
+          "order": 1,
+          "res": "r",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 215,
+          "blend": "blend_UseCocos",
+          "rotateFaceMask":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0.03,
+            "y": 0.15
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_FACE_ENTER",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "rightAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "flyleft",
+          "type": "sprite",
+          "order": 1,
+          "res": "flyleft",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 67,
+          "blend": "blend_UseCocos",
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": -0.3,
+            "y": 0.0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_EYE_CLOSE",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "leftflyAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "flyright",
+          "type": "sprite",
+          "order": 1,
+          "res": "flyright",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 97,
+          "blend": "blend_UseCocos",
+          "rotateFaceMask":{
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "positionRate": {
+            "x": 0.3,
+            "y": 0.0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.6,
+            "y": 0.6
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_EYE_CLOSE",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "rightflyAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "eyeleft",
+          "type": "sprite",
+          "order": 1,
+          "res": "eyeleft",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 219,
+          "blend": "blend_UseCocos",
+          "rotateFaceMask":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": -0.1,
+            "y": 0.0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_EYE_CLOSE",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "eyeleftAnim"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "eyeright",
+          "type": "sprite",
+          "order": 1,
+          "res": "eyeright",
+          "opacity": 255,
+          "visible": true,
+          "mountPoint": 220,
+          "blend": "blend_UseCocos",
+          "rotateFaceMask":{
+            "x": 1,
+            "y": 1,
+            "z": 1
+          },
+          "positionRate": {
+            "x": 0.1,
+            "y": 0.0
+          },
+          "anchor": {
+            "x": 0.5,
+            "y": 0.5
+          },
+          "scaleRate": {
+            "x": 0.3,
+            "y": 0.3
+          },
+          "rotate": 0,
+          "events": [
+            {
+              "event": "EVENT_EYE_CLOSE",
+              "actions": [
+                {
+                  "type": "animation",
+                  "action": "eyerightAnim"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "default_face_order": [
+    1,
+    1
+  ]
+}

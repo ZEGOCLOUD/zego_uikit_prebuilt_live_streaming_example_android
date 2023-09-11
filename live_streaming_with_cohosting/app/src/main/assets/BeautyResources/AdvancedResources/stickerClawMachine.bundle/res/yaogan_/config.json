@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "yaogan_000.png",
+  "animation": [
+    {
+      "name": "yaoganAnim",
+      "res": "yaogan_",
+      "num": 5,
+      "loop": -1,
+      "delay": 0,
+      "interval": 0.15
+    }
+  ]
+}

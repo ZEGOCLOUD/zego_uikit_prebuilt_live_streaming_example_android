@@ -1,0 +1,38 @@
+{
+  "filter": 3100,
+  "version": "1.4.5",
+  "type": "makeup",
+  "name": "仙棕绿",
+  "items": [
+    {
+      "type": "eyeball_left",
+      "layers": [
+        {
+          "default": {
+            "blend": 16,
+            "res": "xzl_eyeball.png",
+            "w": 0,
+            "h": 0,
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    {
+      "type": "eyeball_right",
+      "layers": [
+        {
+          "default": {
+            "blend": 16,
+            "res": "xzl_eyeball.png",
+            "w": 0,
+            "h": 0,
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    }
+  ]
+}

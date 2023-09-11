@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "pic": "qiqiuR_000.png",
+  "animation": [
+    {
+      "name": "qiqiuR",
+      "res": "qiqiuR_",
+      "num": 29,
+      "loop": -1,
+      "delay": 300,
+      "interval": 0.0666
+    }
+  ]
+}

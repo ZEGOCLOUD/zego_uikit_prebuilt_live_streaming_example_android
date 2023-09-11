@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "faceFilm": [
+    {
+      "name": "liuguang",
+      "res": "liuguang/liuguang_",
+      "type": "uv",
+      "num": 19,
+      "blend": "blend_Screen",
+      "suffix": ".png",
+      "fps": 30,
+      "loop": -1,
+      "id": 0,
+      "trigger_times": -1
+    },
+    {
+      "name": "zhuangshi",
+      "res": "zhuangshi/lianbuzhuangshi_",
+      "type": "uv",
+      "num": 0,
+      "blend": "blend_Opacity",
+      "suffix": ".png",
+      "fps": 1,
+      "loop": -1,
+      "id": 1,
+      "trigger_times": -1
+    }
+  ]
+}

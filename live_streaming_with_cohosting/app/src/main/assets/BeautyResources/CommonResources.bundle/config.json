@@ -1,0 +1,258 @@
+{
+    "version": "1.5.0",
+    "filter": 1001, 
+    "type": "effect_config",
+    "items": [
+        {
+            "type": "segment",
+            "externals": {
+                "bind_face": false,
+                "binarization": false,
+                "light_wrapping": false
+            }
+        },
+        {
+            "type": "sharpen",
+            "default": {
+                "range": [
+                    0,
+                    30
+                ]
+            }
+        },
+        {
+            "type": "beauty_rosy",
+            "default": {
+                "range": [
+                    0,
+                    30
+                ],
+                "res": "RosyResources"
+            }
+        },
+        {
+            "type": "teeth_whitening",
+            "default": {
+                "range": [
+                    0,
+                    30
+                ],
+                "res": "TeethWhiteningResources"
+            }
+        },
+        {
+            "type": "face_whitening",
+            "default": {
+                "range": [      
+                    0,
+                    30
+                ],
+                "res": "FaceWhiteningResources"
+            }
+        },
+        {
+            "type": "bright_eye",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    50
+                ]
+            }
+        },
+        {
+            "type": "beauty_face",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "ios": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "android": {
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        {
+            "type": "thin_face",
+            "default": {
+                "range": [
+                    0,
+                    55
+                ]
+            },
+            "ios": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "android": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "mac": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    70
+                ]
+            }
+        },
+        {
+            "type": "small_face",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    75
+                ]
+            }
+        },
+        {
+            "type": "big_eyes",
+            "default": {
+                "range": [
+                    0,
+                    58
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    75
+                ]
+            }
+        },
+        {
+            "type": "small_mouth",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    70
+                ]
+            }
+        },
+        {
+            "type": "long_chin",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    70
+                ]
+            }
+        },
+        {
+            "type": "thin_nose",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    70
+                ]
+            }
+        },
+        {
+            "type": "stretch_forehead",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    70
+                ]
+            }
+        },
+        {
+            "type": "thin_jaw",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    70
+                ]
+            }
+        },
+        {
+            "type": "thin_cheek",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    70
+                ]
+            }
+        },
+        {
+            "type": "long_nose",
+            "default": {
+                "range": [
+                    0,
+                    100
+                ]
+            },
+            "windows": {
+                "range": [
+                    0,
+                    70
+                ]
+            }
+        }
+    ]
+}
