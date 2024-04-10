@@ -15,8 +15,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AlertDialog.Builder;
 import com.google.android.material.textfield.TextInputLayout;
 import com.zegocloud.uikit.components.common.ZTextButton;
-import com.zegocloud.uikit.prebuilt.livestreaming.ZegoLiveStreamingManager;
-import com.zegocloud.uikit.prebuilt.livestreaming.ZegoLiveStreamingManager.ZegoLiveStreamingListener;
+import com.zegocloud.uikit.prebuilt.livestreaming.api.ZegoUIKitPrebuiltLiveStreamingService;
+import com.zegocloud.uikit.prebuilt.livestreaming.internal.core.PKListener;
 import com.zegocloud.uikit.prebuilt.livestreaming.internal.core.PKService.PKInfo;
 import com.zegocloud.uikit.prebuilt.livestreaming.internal.core.PKService.PKRequest;
 import com.zegocloud.uikit.prebuilt.livestreaming.internal.core.UserRequestCallback;
@@ -49,7 +49,7 @@ public class PKButton extends ZTextButton {
         int padding = Utils.dp2px(8, getResources().getDisplayMetrics());
         setPadding(padding, 0, padding, 0);
 
-        ZegoLiveStreamingManager.getInstance().addLiveStreamingListener(new ZegoLiveStreamingListener() {
+        ZegoUIKitPrebuiltLiveStreamingService.pk.events.setPKListener(new PKListener() {
             @Override
             public void onPKStarted() {
                 updateUI();
@@ -63,7 +63,7 @@ public class PKButton extends ZTextButton {
             @Override
             public void onOutgoingPKBattleRequestTimeout(String requestID, ZegoUIKitUser anotherHost) {
                 updateUI();
-                ZegoLiveStreamingManager.getInstance()
+                ZegoUIKitPrebuiltLiveStreamingService.common
                     .showTopTips(getContext().getString(R.string.livestreaming_send_pk_no_reply), false);
             }
 
@@ -71,17 +71,17 @@ public class PKButton extends ZTextButton {
             public void onOutgoingPKBattleRequestRejected(int reason, ZegoUIKitUser anotherHostUser) {
                 updateUI();
                 if (reason == ZegoLiveStreamingPKBattleRejectCode.HOST_REJECT.ordinal()) {
-                    ZegoLiveStreamingManager.getInstance()
+                    ZegoUIKitPrebuiltLiveStreamingService.common
                         .showTopTips(getContext().getString(R.string.livestreaming_send_pk_rejected), false);
                 } else {
-                    ZegoLiveStreamingManager.getInstance()
+                    ZegoUIKitPrebuiltLiveStreamingService.common
                         .showTopTips(getContext().getString(R.string.livestreaming_send_pk_busy), false);
                 }
             }
 
             @Override
             public void onOutgoingPKBattleRequestAccepted(String anotherHostLiveID, ZegoUIKitUser anotherHostUser) {
-                ZegoLiveStreamingManager.getInstance()
+                ZegoUIKitPrebuiltLiveStreamingService.pk
                     .startPKBattleWith(anotherHostLiveID, anotherHostUser.userID, anotherHostUser.userName);
             }
         });
@@ -90,9 +90,9 @@ public class PKButton extends ZTextButton {
     @Override
     protected void afterClick() {
         super.afterClick();
-        PKRequest pkRequest = ZegoLiveStreamingManager.getInstance().getSendPKStartRequest();
+        PKRequest pkRequest = ZegoUIKitPrebuiltLiveStreamingService.pk.getSendPKStartRequest();
         if (pkRequest == null) {
-            if (ZegoLiveStreamingManager.getInstance().getPKInfo() == null) {
+            if (ZegoUIKitPrebuiltLiveStreamingService.pk.getPKInfo() == null) {
                 Builder builder = new Builder(getContext());
                 View layout = LayoutInflater.from(getContext())
                     .inflate(R.layout.livestreaming_dialog_pkinput, null, false);
@@ -104,12 +104,12 @@ public class PKButton extends ZTextButton {
                 button.setOnClickListener(view -> {
                     EditText editText = inputLayout.getEditText();
                     if (!TextUtils.isEmpty(editText.getText())) {
-                        ZegoLiveStreamingManager.getInstance()
+                        ZegoUIKitPrebuiltLiveStreamingService.pk
                             .sendPKBattleRequest(editText.getText().toString(), new UserRequestCallback() {
                                 @Override
                                 public void onUserRequestSend(int errorCode, String requestID) {
                                     if (errorCode != 0) {
-                                        ZegoLiveStreamingManager.getInstance().showTopTips(
+                                        ZegoUIKitPrebuiltLiveStreamingService.common.showTopTips(
                                             getContext().getString(R.string.livestreaming_send_pk_error, errorCode),
                                             false);
                                     }
@@ -120,10 +120,10 @@ public class PKButton extends ZTextButton {
                     }
                 });
             } else {
-                ZegoLiveStreamingManager.getInstance().stopPKBattle();
+                ZegoUIKitPrebuiltLiveStreamingService.pk.stopPKBattle();
             }
         } else {
-            ZegoLiveStreamingManager.getInstance().cancelPKBattleRequest(new UserRequestCallback() {
+            ZegoUIKitPrebuiltLiveStreamingService.pk.cancelPKBattleRequest(new UserRequestCallback() {
                 @Override
                 public void onUserRequestSend(int errorCode, String requestID) {
                     updateUI();
@@ -133,11 +133,11 @@ public class PKButton extends ZTextButton {
     }
 
     public void updateUI() {
-        PKInfo pkInfo = ZegoLiveStreamingManager.getInstance().getPKInfo();
+        PKInfo pkInfo = ZegoUIKitPrebuiltLiveStreamingService.pk.getPKInfo();
         if (pkInfo != null) {
             setText("End PK");
         } else {
-            PKRequest sendPKStartRequest = ZegoLiveStreamingManager.getInstance().getSendPKStartRequest();
+            PKRequest sendPKStartRequest = ZegoUIKitPrebuiltLiveStreamingService.pk.getSendPKStartRequest();
             if (sendPKStartRequest == null) {
                 setText("PK");
             } else {

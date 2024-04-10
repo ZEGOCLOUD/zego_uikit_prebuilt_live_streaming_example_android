@@ -15,11 +15,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import com.zegocloud.uikit.prebuilt.livestreaming.ZegoLiveStreamingManager;
-import com.zegocloud.uikit.prebuilt.livestreaming.ZegoLiveStreamingManager.ZegoLiveStreamingListener;
 import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreamingConfig;
 import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreamingFragment;
+import com.zegocloud.uikit.prebuilt.livestreaming.api.ZegoUIKitPrebuiltLiveStreamingService;
 import com.zegocloud.uikit.prebuilt.livestreaming.core.ZegoLiveStreamingRole;
+import com.zegocloud.uikit.prebuilt.livestreaming.internal.core.PKListener;
 import com.zegocloud.uikit.prebuilt.livestreaming.internal.core.ZegoLiveStreamingPKBattleViewProvider;
 import com.zegocloud.uikit.prebuilt.livestreaming.internal.core.ZegoLiveStreamingPKBattleViewProvider2;
 import com.zegocloud.uikit.service.defines.ZegoUIKitUser;
@@ -66,6 +66,18 @@ public class LiveActivity extends AppCompatActivity {
         addPKDialog();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ZegoUIKitPrebuiltLiveStreamingService.common.unMuteAllAudioVideo();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        ZegoUIKitPrebuiltLiveStreamingService.common.muteAllAudioVideo();
+    }
+
     public void addPKButton(ZegoUIKitPrebuiltLiveStreamingFragment fragment) {
         PKButton pkButton = new PKButton(this);
         int size = Utils.dp2px(36f, getResources().getDisplayMetrics());
@@ -81,7 +93,7 @@ public class LiveActivity extends AppCompatActivity {
     }
 
     private void addPKDialog() {
-        ZegoLiveStreamingManager.getInstance().addLiveStreamingListener(new ZegoLiveStreamingListener() {
+        ZegoUIKitPrebuiltLiveStreamingService.pk.events.setPKListener(new PKListener() {
             @Override
             public void onIncomingPKBattleRequestReceived(String requestID, ZegoUIKitUser anotherHostUser,
                 String anotherHostLiveID, String customData) {
@@ -95,7 +107,7 @@ public class LiveActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            ZegoLiveStreamingManager.getInstance()
+                            ZegoUIKitPrebuiltLiveStreamingService.pk
                                 .acceptIncomingPKBattleRequest(requestID, anotherHostLiveID, anotherHostUser);
                         }
                     });
@@ -104,7 +116,7 @@ public class LiveActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
-                            ZegoLiveStreamingManager.getInstance().rejectPKBattleStartRequest(requestID);
+                            ZegoUIKitPrebuiltLiveStreamingService.pk.rejectPKBattleStartRequest(requestID);
                         }
                     });
                 startPKDialog = startPKBuilder.create();

@@ -7,8 +7,8 @@ import android.view.Gravity;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.zegocloud.uikit.components.common.ZTextButton;
-import com.zegocloud.uikit.prebuilt.livestreaming.ZegoLiveStreamingManager;
-import com.zegocloud.uikit.prebuilt.livestreaming.ZegoLiveStreamingManager.ZegoLiveStreamingListener;
+import com.zegocloud.uikit.prebuilt.livestreaming.api.ZegoUIKitPrebuiltLiveStreamingService;
+import com.zegocloud.uikit.prebuilt.livestreaming.internal.core.PKListener;
 import com.zegocloud.uikit.service.defines.ZegoUIKitCallback;
 import com.zegocloud.uikit.utils.Utils;
 
@@ -36,7 +36,7 @@ public class MutePKUserButton extends ZTextButton {
         int padding = Utils.dp2px(8, getResources().getDisplayMetrics());
         setPadding(padding, 0, padding, 0);
         updateButton();
-        ZegoLiveStreamingManager.getInstance().addLiveStreamingListener(new ZegoLiveStreamingListener() {
+        ZegoUIKitPrebuiltLiveStreamingService.pk.events.setPKListener(new PKListener() {
             @Override
             public void onOtherHostMuted(String userID, boolean muted) {
                 updateButton();
@@ -46,8 +46,8 @@ public class MutePKUserButton extends ZTextButton {
 
     @Override
     protected void afterClick() {
-        boolean pkUserMuted = ZegoLiveStreamingManager.getInstance().isAnotherHostMuted();
-        ZegoLiveStreamingManager.getInstance().muteAnotherHostAudio(!pkUserMuted, new ZegoUIKitCallback() {
+        boolean pkUserMuted = ZegoUIKitPrebuiltLiveStreamingService.pk.isAnotherHostMuted();
+        ZegoUIKitPrebuiltLiveStreamingService.pk.muteAnotherHostAudio(!pkUserMuted, new ZegoUIKitCallback() {
             @Override
             public void onResult(int errorCode) {
 
@@ -56,7 +56,7 @@ public class MutePKUserButton extends ZTextButton {
     }
 
     private void updateButton() {
-        boolean pkUserMuted = ZegoLiveStreamingManager.getInstance().isAnotherHostMuted();
+        boolean pkUserMuted = ZegoUIKitPrebuiltLiveStreamingService.pk.isAnotherHostMuted();
         if (pkUserMuted) {
             setText("Unmute user");
         } else {
