@@ -36,7 +36,7 @@ public class MutePKUserButton extends ZTextButton {
         int padding = Utils.dp2px(8, getResources().getDisplayMetrics());
         setPadding(padding, 0, padding, 0);
         updateButton();
-        ZegoUIKitPrebuiltLiveStreamingService.pk.events.setPKListener(new PKListener() {
+        ZegoUIKitPrebuiltLiveStreamingService.pk.events.addPKListener(new PKListener() {
             @Override
             public void onOtherHostMuted(String userID, boolean muted) {
                 updateButton();

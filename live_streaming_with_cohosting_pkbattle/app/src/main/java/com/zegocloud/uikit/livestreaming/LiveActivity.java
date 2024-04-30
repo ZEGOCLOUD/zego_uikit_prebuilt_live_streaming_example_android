@@ -93,7 +93,7 @@ public class LiveActivity extends AppCompatActivity {
     }
 
     private void addPKDialog() {
-        ZegoUIKitPrebuiltLiveStreamingService.pk.events.setPKListener(new PKListener() {
+        ZegoUIKitPrebuiltLiveStreamingService.pk.events.addPKListener(new PKListener() {
             @Override
             public void onIncomingPKBattleRequestReceived(String requestID, ZegoUIKitUser anotherHostUser,
                 String anotherHostLiveID, String customData) {
