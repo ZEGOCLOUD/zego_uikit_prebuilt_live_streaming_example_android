@@ -6,6 +6,10 @@ import com.zegocloud.demo.myapplication.R
 import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreamingConfig
 import com.zegocloud.uikit.prebuilt.livestreaming.ZegoUIKitPrebuiltLiveStreamingFragment
 
+/**
+ * if AppTheme meet error,change you app theme to
+ * "Theme.MaterialComponents.Light.NoActionBar.Bridge"
+ */
 class LiveActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,12 +20,12 @@ class LiveActivity : AppCompatActivity() {
 
 
     private fun addFragment() {
-        val appID =
-        val appSign =
-        val userID = "123324"
-        val userName = "235345"
+        val appID = 
+        val appSign = 
+        val userID = 
+        val userName = 
         val isHost = true
-        val liveID = "345345"
+        val liveID = 
         val config = if (isHost) {
             ZegoUIKitPrebuiltLiveStreamingConfig.host(true)
         } else {

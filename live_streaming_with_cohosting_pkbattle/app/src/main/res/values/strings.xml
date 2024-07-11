@@ -7,4 +7,6 @@
   <string name="livestreaming_send_pk_busy">send pk request,but the host is busy</string>
   <string name="livestreaming_invite_pk_title">%s invite you pkbattle</string>
   <string name="livestreaming_stop_pk_message">%s has Stopped PK</string>
+  <string name="livestreaming_ok">OK</string>
+  <string name="livestreaming_disagree">Disagree</string>
 </resources>

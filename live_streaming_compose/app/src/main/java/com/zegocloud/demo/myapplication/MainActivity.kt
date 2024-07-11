@@ -25,7 +25,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background
                 ) {
                     FilledButtonExample(onClick = {
-                        startActivity(Intent(this,LiveActivity::class.java))
+                        val intent = Intent(this, LiveActivity::class.java)
+                        startActivity(intent)
                     })
                 }
             }

@@ -102,7 +102,7 @@ public class LiveActivity extends AppCompatActivity {
                 }
                 AlertDialog.Builder startPKBuilder = new AlertDialog.Builder(LiveActivity.this);
                 startPKBuilder.setTitle(getString(R.string.livestreaming_invite_pk_title, anotherHostUser.userName));
-                startPKBuilder.setPositiveButton(com.zegocloud.uikit.prebuilt.livestreaming.R.string.livestreaming_ok,
+                startPKBuilder.setPositiveButton(R.string.livestreaming_ok,
                     new OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -111,14 +111,13 @@ public class LiveActivity extends AppCompatActivity {
                                 .acceptIncomingPKBattleRequest(requestID, anotherHostLiveID, anotherHostUser);
                         }
                     });
-                startPKBuilder.setNegativeButton(
-                    com.zegocloud.uikit.prebuilt.livestreaming.R.string.livestreaming_disagree, new OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                            ZegoUIKitPrebuiltLiveStreamingService.pk.rejectPKBattleStartRequest(requestID);
-                        }
-                    });
+                startPKBuilder.setNegativeButton(R.string.livestreaming_disagree, new OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                        ZegoUIKitPrebuiltLiveStreamingService.pk.rejectPKBattleStartRequest(requestID);
+                    }
+                });
                 startPKDialog = startPKBuilder.create();
                 startPKDialog.setCanceledOnTouchOutside(false);
                 startPKDialog.show();
